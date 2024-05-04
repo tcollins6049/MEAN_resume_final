@@ -1,0 +1,11 @@
+<div class="container">
+    <h1>Projects</h1>
+    <div *ngFor="let proj of projs">
+      <p>Project Title: {{ proj.proj_name }}</p>
+      <p>Location: {{ proj.location }}</p>
+      <p>Start Date: {{ proj.startDate }}</p>
+      <p>End Date: {{ proj.endDate }}</p>
+      <p>Description: {{ proj.description }}</p>
+      <hr>
+    </div>
+</div>

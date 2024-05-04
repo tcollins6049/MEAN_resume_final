@@ -1,0 +1,13 @@
+<div class="container">
+    <h1>Education</h1>
+    <div *ngFor="let ed of edu">
+      <p>Company: {{ ed.University }}</p>
+      <p>Degree: {{ ed.degreeType }}</p>
+      <p>Start Date: {{ ed.startDate }}</p>
+      <p>End Date: {{ ed.endDate }}</p>
+      <p>Concentration: {{ ed.concentration }}</p>
+      <p>GPA: {{ ed.gpa }}</p>
+      <p>Description: {{ ed.description }}</p>
+      <hr>
+    </div>
+</div>

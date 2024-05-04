@@ -1,0 +1,12 @@
+<div class="container">
+    <h1>Experience</h1>
+    <div *ngFor="let exp of exper">
+      <p>Company: {{ exp.company }}</p>
+      <p>Location: {{ exp.location }}</p>
+      <p>Position: {{ exp.position }}</p>
+      <p>Start Date: {{ exp.startDate }}</p>
+      <p>End Date: {{ exp.endDate }}</p>
+      <p>Description: {{ exp.description }}</p>
+      <hr>
+    </div>
+</div>
