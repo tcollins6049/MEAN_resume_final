@@ -15,7 +15,7 @@ export class ProjectsComponent implements OnInit {
     this.http.get<any[]>('http://localhost:3000/projects').subscribe(
       (data: any[]) => {
         this.projs = data;
-        console.log('Experience data:', this.projs); // Log the fetched user data
+        console.log('Project data:', this.projs); // Log the fetched user data
       },
       (error) => {
         console.error('Error fetching users:', error);

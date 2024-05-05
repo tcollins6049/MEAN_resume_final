@@ -1,14 +1,54 @@
-.container {
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
     width: 80%;
     margin: auto;
     padding: 20px;
-}
+  }
   
-h1, h2 {
+  .project-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: transform 0.3s;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .project-content {
+    padding: 20px;
+  }
+  
+  .project-content h2 {
     color: #333;
-}
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
   
-p {
-    font-size: 18px;
+  .project-content p {
+    color: #555;
+    font-size: 16px;
     line-height: 1.6;
-}
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  

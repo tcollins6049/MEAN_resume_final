@@ -2,6 +2,7 @@
 const mongoose = require('mongoose');
 
 const projectsSchema = new mongoose.Schema({
+  // _id: String,
   proj_name: String,
   // Organization: String,
   location: String,

@@ -9,6 +9,8 @@ import { RouterModule } from '@angular/router';
 import { ExperienceComponent } from './experience-comp/experience-comp.component';
 import { EducationComponent } from './education-comp/education-comp.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { ProjectDetailsComponent } from './project-details/project-details.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { ProjectsComponent } from './projects/projects.component';
     ExperienceComponent,
     EducationComponent,
     ProjectsComponent,
+    ProjectDetailsComponent,
+    HeaderComponent,
     // HttpClientModule
   ],
   imports: [

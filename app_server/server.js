@@ -53,6 +53,19 @@ app.get('/projects', async (req, res) => {
   }
 });
 
+// Route to fetch project details by ID
+app.get('/projects/:_id', async (req, res) => {
+  try {
+    const project = await Projects.findById(req.params._id);
+    if (!project) {
+      return res.status(404).json({ message: 'Project not found' });
+    }
+    res.json(project);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
 
 
 
