@@ -1,9 +1,45 @@
-<div *ngIf="project">
-    <h2>Project Details</h2>
-    <p><strong>Project ID:</strong> {{ project._id }}</p>
-    <p><strong>Project Name:</strong> {{ project.proj_name }}</p>
-    <!-- Add more details here as needed -->
-</div>
-<div *ngIf="!project">
-    <p>Project not found.</p>
+<app-header></app-header>
+
+<div class="container">
+  <!-- Header -->
+  <div class="row banner">
+    <div class="col-12">
+      <h1>{{ project.proj_name }}
+      </h1>
+    </div>
+  </div>
+  <!-- Project Content -->
+  <div class="row">
+    <div class="col-12 col-md-6">
+
+      <div *ngIf="!project">
+        <p>Project not found.</p>
+      </div>
+
+      <div class="card card-primary">
+        <div class="card-block">
+          <h2 class="card-title">Address</h2>
+          <p class="card-text">{{ project.location }}</p>
+        </div>
+      </div>
+
+
+      <div class="card card-primary">
+        <div class="card-block">
+          <h2 class="card-title">Duration</h2>
+          <p class="card-text">Start Date: {{ project.startDate }}</p>
+          <p class="card-text">End Date: {{ project.endDate }}</p>
+        </div>
+      </div>
+
+
+      <div class="card card-primary">
+        <div class="card-block">
+          <h2 class="card-title">About this project:</h2>
+          <p class="card-text">{{ project.description }}</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </div>

@@ -1,21 +1,21 @@
-<!-- <div class="container">
-    <h1>Projects</h1>
-    <div *ngFor="let proj of projs">
-      <p>Project Title: {{ proj.proj_name }}</p>
-      <p>Location: {{ proj.location }}</p>
-      <p>Start Date: {{ proj.startDate }}</p>
-      <p>End Date: {{ proj.endDate }}</p>
-      <p>Description: {{ proj.description }}</p>
-      <hr>
-    </div>
-</div>-->
-
 <app-header></app-header>
 
 <div class="container">
+  <!-- Header and Stapline -->
+  <div class="row banner">
+    <div class="col-12">
+      <h1>Projects
+        <small>Your Strapline</small>
+      </h1>
+    </div>
+  </div>
+  <!-- Data from projects collection -->
   <div class="project-card" *ngFor="let proj of projs">
     <div class="project-content">
       <h2>{{ proj.proj_name }}</h2>
+      <p>Location: {{ proj.location }}</p>
+      <p>Start Date: {{ proj.startDate }}</p>
+      <p>End Date: {{ proj.endDate }}</p>
       <p>{{ proj.description }}</p>
       <a [routerLink]="'/projects/' + proj._id" class="btn">View Project</a>
     </div>

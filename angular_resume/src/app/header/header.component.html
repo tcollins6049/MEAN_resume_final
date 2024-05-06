@@ -1,15 +1,26 @@
-<header>
-    <div class="banner">
-      <h1>My Website</h1>
-      <nav>
-        <ul>
-          <li routerLinkActive="active"><a routerLink="/">Home</a></li>
-          <li routerLinkActive="active"><a routerLink="/experience">Experience</a></li>
-          <li routerLinkActive="active"><a routerLink="/education">Education</a></li>
-          <li routerLinkActive="active"><a routerLink="/projects">Projects</a></li>
-        </ul>
-      </nav>
+<nav class="navbar fixed-top navbar-expand-md navbar-light">
+  <div class="container">
+    <!-- Home Button -->
+    <a routerLink="/" routerLinkActive="active" class="navbar-brand">Your Name</a>
+    <button type="button" data-toggle="collapse" data-target="#navbarMain" class="navbar-toggler">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Collapseable Navigation Buttons -->
+    <div id="navbarMain" class="navbar-collapse collapse">
+      <ul class="navbar-nav justify-content-end">
+        <!-- Education Page -->
+        <li class="nav-item" routerLinkActive="active">
+          <a routerLink="/education" class="nav-link">Education</a>
+        </li>
+        <!-- Experience Page -->
+        <li class="nav-item" routerLinkActive="active">
+          <a routerLink="/experience" class="nav-link">Experience</a>
+        </li>
+        <!-- Projects -->
+        <li class="nav-item" routerLinkActive="active">
+          <a routerLink="/projects" class="nav-link">Projects</a>
+        </li>
+      </ul>
     </div>
-  </header>
-  
-  
+  </div>
+</nav>

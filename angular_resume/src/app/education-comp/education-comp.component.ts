@@ -8,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EducationComponent implements OnInit {
   edu: any[] = [];
+  certs: any[] = [];
+  licenses: any[] = [];
 
-  constructor(private http: HttpClient) {}
+
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
     this.http.get<any[]>('http://localhost:3000/education').subscribe(
@@ -21,5 +24,11 @@ export class EducationComponent implements OnInit {
         console.error('Error fetching users:', error);
       }
     );
+
+
+  }
+
+  isListNotEmpty(list: any[]): boolean {
+    return list && list.length > 0;
   }
 }

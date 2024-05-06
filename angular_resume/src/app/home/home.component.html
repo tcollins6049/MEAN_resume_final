@@ -1,11 +1,19 @@
 <app-header></app-header>
-<div class="container">
-    <h1>Welcome to my Resume Website!</h1>
-    <h2>About Me</h2>
-    <div *ngFor="let user of users">
-      <p>Name: {{ user.name }}</p>
-      <p>Email: {{ user.email }}</p>
-      <p>Contact Info: {{ user.contactInfo }}</p>
-      <hr>
+<div class="container content">
+  <!-- Header and Stapline -->
+  <div class="row banner">
+    <div class="col-12">
+      <img class="profile-picture" src="../../assets/images/boom-box-lincoln.jpg" alt="Profile Picture">
+      <h1>About me
+        <small>Your Strapline</small>
+      </h1>
     </div>
+  </div>
+  <!-- Data from database -->
+  <div class="card" *ngFor="let user of users">
+    <p>Name: {{ user.name }}</p>
+    <p>Email: {{ user.email }}</p>
+    <p>Contact Info: {{ user.contactInfo }}</p>
+    <hr>
+  </div>
 </div>

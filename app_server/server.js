@@ -5,6 +5,7 @@ const User = require('./models/user');
 const Experience = require('./models/experience');
 const Education = require('./models/education');
 const Projects = require('./models/projects');
+const Volunteer = require('./models/volunteer')
 
 const app = express();
 
@@ -29,8 +30,15 @@ app.get('/users', async (req, res) => {
 app.get('/experience', async (req, res) => {
   try {
     const experience = await Experience.find();
-    res.json(experience);
+    const volunteer = await Volunteer.find();
+
+    const returnObj = [experience, volunteer];
+    console.log("app.get/experience - returnObj: " + returnObj.e + " " + returnObj.v);
+
+    // Send response with both education and volunteer data
+    res.json(returnObj);
   } catch (err) {
+    // Handle errors
     res.status(500).json({ message: err.message });
   }
 });
@@ -43,6 +51,17 @@ app.get('/education', async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 });
+
+
+app.get('/volunteer', async (req, res) => {
+  try {
+    const volunteer = await Volunteer.find();
+    res.json(volunteer);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
 
 app.get('/projects', async (req, res) => {
   try {

@@ -1,13 +1,44 @@
 <app-header></app-header>
 <div class="container">
-    <h1>Experience</h1>
-    <div *ngFor="let exp of exper">
-      <p>Company: {{ exp.company }}</p>
+  <!-- Header and Stapline -->
+  <div class="row banner">
+    <div class="col-12">
+      <h1>Experience
+        <small>Your Strapline</small>
+      </h1>
+    </div>
+  </div>
+  <!-- Data from experience collection -->
+  <div class="card" *ngFor="let exp of exper">
+    <h2>{{ exp.position }}</h2>
+    <h3>{{ exp.company }}</h3>
+    <p>Location: {{ exp.location }}</p>
+    <p>Start Date: {{ exp.startDate }}</p>
+    <p>End Date: {{ exp.endDate }}</p>
+    <p>Description: {{ exp.description }}</p>
+    <hr>
+  </div>
+
+  <!-- Display Volunteer expperience if they exist -->
+  <div *ngIf="isListNotEmpty(vols)">
+    <!-- Header and Stapline -->
+    <div class="row banner">
+      <div class="col-12">
+        <h1>Volunteering
+          <small>Your Strapline</small>
+        </h1>
+      </div>
+    </div>
+    <!-- Data from certifications collection -->
+    <div class="card" *ngFor="let exp of vols">
+      <h2>{{ exp.position }}</h2>
+      <h3>{{ exp.company }}</h3>
       <p>Location: {{ exp.location }}</p>
-      <p>Position: {{ exp.position }}</p>
       <p>Start Date: {{ exp.startDate }}</p>
       <p>End Date: {{ exp.endDate }}</p>
       <p>Description: {{ exp.description }}</p>
       <hr>
     </div>
+
+  </div>
 </div>

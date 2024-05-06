@@ -1,14 +1,53 @@
 <app-header></app-header>
-<div class="container">
-    <h1>Education</h1>
-    <div *ngFor="let ed of edu">
-      <p>Company: {{ ed.University }}</p>
-      <p>Degree: {{ ed.degreeType }}</p>
-      <p>Start Date: {{ ed.startDate }}</p>
-      <p>End Date: {{ ed.endDate }}</p>
-      <p>Concentration: {{ ed.concentration }}</p>
-      <p>GPA: {{ ed.gpa }}</p>
-      <p>Description: {{ ed.description }}</p>
-      <hr>
+<div class="container content">
+  <!-- Header and Stapline -->
+  <div class="row banner">
+    <div class="col-12">
+      <h1>Education
+        <small>Your Strapline</small>
+      </h1>
     </div>
+  </div>
+  <!-- Data from education collection -->
+  <div class=card *ngFor="let ed of edu">
+    <h2>{{ ed.University }}</h2>
+    <h3>{{ ed.degreeType }} - {{ ed.concentration }}</h3>
+    <p>Start Date: {{ ed.startDate }}</p>
+    <p>End Date: {{ ed.endDate }}</p>
+    <p>GPA: {{ ed.gpa }}</p>
+    <p>Description: {{ ed.description }}</p>
+    <hr>
+  </div>
+
+  <!-- Display Certifications if they exist -->
+  <div *ngIf="isListNotEmpty(certs)">
+    <!-- Header and Stapline -->
+    <div class="row banner">
+      <div class="col-12">
+        <h1>Certifications
+          <small>Your Strapline</small>
+        </h1>
+      </div>
+    </div>
+    <!-- Data from certifications collection -->
+
+    <!-- implement here -->
+
+
+  </div>
+
+  <!-- Display Licenses if they exist -->
+  <div *ngIf="isListNotEmpty(licenses)">
+    <!-- Header and Stapline -->
+    <div class="row banner">
+      <div class="col-12">
+        <h1>Licenses
+          <small>Your Strapline</small>
+        </h1>
+      </div>
+    </div>
+    <!-- Data from certifications collection -->
+
+    <!-- implement here -->
+  </div>
 </div>
